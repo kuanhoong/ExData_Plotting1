@@ -6,10 +6,10 @@ library(data.table)
 ## Getting full dataset
 DT<-fread("./household_power_consumption.txt", na.strings="?")
 
-DT$Date <- as.Date(DT1$Date, format="%d/%m/%Y")
+DT$Date <- as.Date(DT$Date, format="%d/%m/%Y")
 
 ## Subsetting the data
-DT.filter <- subset(DT1, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
+DT.filter <- subset(DT, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 rm(DT1)
 
 ## Converting dates
